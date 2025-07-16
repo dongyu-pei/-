@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "not-pure-poole"
-  spec.version       = "0.1.0"
+  spec.name          = "裴东宇"
+  spec.version       = "山西太原中北大学计算机科学与技术学院dongyu pei"
   spec.authors       = ["Mark Otto", "Songzi Vong"]
   spec.email         = ["markdotto@gmail.com", "vszhub@gmail.com"]
 
