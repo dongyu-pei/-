@@ -1,0 +1,18 @@
+---
+# Use a comment to ensure Jekyll reads the file to be transformed into CSS later
+# only main files contain this front matter, not partials.
+---
+
+@import "variables";
+@import "base";
+@import "type";
+@import "code";
+@import "layout";
+@import "sidebar";
+@import "message";
+@import "alignment";
+
+@import "syntax-light";
+@media (prefers-color-scheme: dark) {
+  @import "syntax-dark";
+}
