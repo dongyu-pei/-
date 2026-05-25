@@ -11,6 +11,12 @@
 @import "sidebar";
 @import "message";
 @import "alignment";
+@import "profile";
+
+// Hide duplicate page title on home page
+.page-title {
+  display: none;
+}
 
 @import "syntax-light";
 @media (prefers-color-scheme: dark) {
