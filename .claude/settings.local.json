@@ -6,7 +6,9 @@
       "Bash(git push:*)",
       "Bash(git ls-tree:*)",
       "Bash(git add:*)",
-      "Bash(rm -f fff82546b2551dad2785a98a97e2f0f9.png && git rm --cached fff82546b2551dad2785a98a97e2f0f9.png .claude/settings.local.json 2>/dev/null && git commit --amend --no-edit && git push --force-with-lease)"
+      "Bash(rm -f fff82546b2551dad2785a98a97e2f0f9.png && git rm --cached fff82546b2551dad2785a98a97e2f0f9.png .claude/settings.local.json 2>/dev/null && git commit --amend --no-edit && git push --force-with-lease)",
+      "Bash(git rm:*)",
+      "Bash(gh run:*)"
     ]
   }
 }
