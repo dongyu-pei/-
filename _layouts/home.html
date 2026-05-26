@@ -6,3 +6,18 @@ layout: default
   <h1 class="page-title">{{ page.title }}</h1>
   {{ content }}
 </article>
+
+{% if page.content_bg_image %}
+<style>
+  .info-card {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+  }
+  @media (prefers-color-scheme: dark) {
+    .info-card {
+      background: rgba(30, 30, 30, 0.6) !important;
+    }
+  }
+</style>
+{% endif %}
