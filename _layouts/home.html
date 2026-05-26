@@ -2,22 +2,27 @@
 layout: default
 ---
 
+{% if page.content_bg_image %}
+<div id="splash-screen" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9999; background: center / cover no-repeat url({{ page.content_bg_image | relative_url }}); display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease;">
+</div>
+{% endif %}
+
 <article class="page">
   <h1 class="page-title">{{ page.title }}</h1>
   {{ content }}
 </article>
 
 {% if page.content_bg_image %}
-<style>
-  .info-card {
-    background: rgba(255, 255, 255, 0.6) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
-  }
-  @media (prefers-color-scheme: dark) {
-    .info-card {
-      background: rgba(30, 30, 30, 0.6) !important;
-    }
-  }
-</style>
+<script>
+  (function() {
+    var splash = document.getElementById('splash-screen');
+    setTimeout(function() {
+      splash.style.opacity = '0';
+      splash.style.visibility = 'hidden';
+      setTimeout(function() {
+        splash.remove();
+      }, 800);
+    }, 5000);
+  })();
+</script>
 {% endif %}
