@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% if page.content_bg_image %}
-<div id="splash-screen" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9999; background: center / cover no-repeat url({{ page.content_bg_image | relative_url }}); display: flex; align-items: center; justify-content: center; transition: opacity 0.8s ease, visibility 0.8s ease;">
+<div id="splash-screen" class="splash-screen" style="background: center / cover no-repeat url({{ page.content_bg_image | relative_url }});">
 </div>
 {% endif %}
 
@@ -13,6 +13,23 @@ layout: default
 </article>
 
 {% if page.content_bg_image %}
+<style>
+  .splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+  }
+  @media (min-width: 48rem) {
+    .splash-screen {
+      left: 25%;
+      width: 75%;
+    }
+  }
+</style>
 <script>
   (function() {
     var splash = document.getElementById('splash-screen');
